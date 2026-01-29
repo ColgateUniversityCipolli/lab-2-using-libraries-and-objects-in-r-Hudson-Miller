@@ -226,6 +226,8 @@ $$F_n = \frac{n(n+1)}{2}.$$
 
 Create a vector of the first 10 Triangular Numbers. 
 
+Again, I do not believe that this is easy to do with the `seq()` and `rep()` functions. We use the following function to store the sequence output to the `tri` vector:
+
 ```{r}
 tri = numeric(10)
 
