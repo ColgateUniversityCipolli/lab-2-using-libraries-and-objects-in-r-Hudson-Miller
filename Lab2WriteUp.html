@@ -302,6 +302,39 @@ the command instead of actually citing. --></p>
 <h2 data-number="2.1" class="anchored" data-anchor-id="part-a-1"><span class="header-section-number">2.1</span> Part a</h2>
 <p>The Fibonacci Sequence is a recursive formula: <span class="math display">\[F_n = F_{n-1} + F_{n-2}\]</span> where <span class="math inline">\(F_0=0\)</span> and <span class="math inline">\(F_1=1\)</span>.</p>
 <p>Create a vector of the first 10 Fibonacci numbers.</p>
+<p><strong>Solution</strong></p>
+<p>With what we’ve learned in class, the only way to create this vector would be to list it explicitly using the <code>c()</code> function:</p>
+<p></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>(<span class="at">fib.c =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">13</span>,<span class="dv">21</span>,<span class="dv">34</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  0  1  1  2  3  5  8 13 21 34</code></pre>
+</div>
+</div>
+<p></p>
+<p>I was curious about how we could create functions with their outputs stored to vectors, and came up with this:</p>
+<p></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>fib <span class="ot">=</span> <span class="fu">numeric</span>(<span class="dv">10</span>)</span>
+<span id="cb25-2"><a href="#cb25-2"></a>fib[<span class="dv">1</span>] <span class="ot">=</span> <span class="dv">0</span></span>
+<span id="cb25-3"><a href="#cb25-3"></a>fib[<span class="dv">2</span>] <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb25-4"><a href="#cb25-4"></a></span>
+<span id="cb25-5"><a href="#cb25-5"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">3</span><span class="sc">:</span><span class="dv">10</span>) {</span>
+<span id="cb25-6"><a href="#cb25-6"></a>  fib[i] <span class="ot">=</span> fib[i<span class="dv">-2</span>] <span class="sc">+</span> fib[i<span class="dv">-1</span>]</span>
+<span id="cb25-7"><a href="#cb25-7"></a>}</span>
+<span id="cb25-8"><a href="#cb25-8"></a></span>
+<span id="cb25-9"><a href="#cb25-9"></a>fib</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  0  1  1  2  3  5  8 13 21 34</code></pre>
+</div>
+</div>
+<p></p>
 </section>
 <section id="part-b-1" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="part-b-1"><span class="header-section-number">2.2</span> Part b</h2>
