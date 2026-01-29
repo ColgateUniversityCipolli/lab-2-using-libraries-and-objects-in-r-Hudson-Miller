@@ -130,7 +130,7 @@ the command instead of actually citing. -->
 
 **Solution**
 
-The `esquisse` [@esquisse] package creates a GUI in `r` for graphs, allowing users to interact with the `ggally` package using drag-and-drop operations rather than strictly `r` code.
+The `esquisse` [@esquisse] package creates a GUI in `r` for graphs, allowing users to interact with graphs and data using drag-and-drop operations rather than strictly `r` code.
 
 
 ## Part f
@@ -139,6 +139,10 @@ Run `esquisser()` in your console -- not in a chunk of `R` code in your Quarto d
 i. Select `palmerpenguins` from the "Select an environment in which to search:" dropdown. This should automatically select `penguins` in the "Select a data.frame:" dropdown. Click "Import Data".
 ii. Drag `body_mass_g` to the X box and `species` to the fill box. 
 iii. Describe what you see in words. What can you conclude about Adelie, Chinstrap, and Gentoo penguins based on the resulting plot? 
+
+**Solution**
+
+The overall distribution of body mass has a peak around 3500g,  mainly driven by the large count of the Adelie species with a large concentration of penguins around the 3500g mark. The Chinstrap penguins are similar, though there were less of them represented in the data, and they appear to skew slightly further right than the Adelie penguins. The Gentoo penguins are the heaviest, with a relatively even distribution of body masses between 4500g and 6000g. Overall, the order of the body mass of the average penguin of each species goes Adelies, Chinstraps, and then Gentoos from least to greatest.
 
 # Objects and Vectors
 Create the following vectors in `R`. In some cases, you may be able to use `seq()` or `rep()` while in others you cannot. Use these functions when possible, otherwise manually create the vector and explain why that was necessary.
