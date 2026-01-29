@@ -128,6 +128,11 @@ Add the BibTeX citation for `esquisse` package for `R` to your `.bib` file and c
 <!-- Note the \hspace{-0em} above is for printing 
 the command instead of actually citing. -->
 
+**Solution**
+
+The `esquisse` [@esquisse] package creates a GUI in `r` for graphs, allowing users to interact with the `ggally` package using drag-and-drop operations rather than strictly `r` code.
+
+
 ## Part f
 Run `esquisser()` in your console -- not in a chunk of `R` code in your Quarto document. 
 
