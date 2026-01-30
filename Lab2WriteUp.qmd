@@ -200,7 +200,7 @@ Create a vector of the first 10 Fibonacci numbers.
 
 **Solution**
 
-With what we've learned in class, the only way to create this vector would be to list it explicitly using the `c()` function:
+With what we've learned in class, the best way to create this vector would probably be to list it explicitly using the `c()` function:
 
 ```{r}
 (fib.c = c(0,1,1,2,3,5,8,13,21,34))
@@ -247,5 +247,25 @@ Consider setting up data entry for this experiment.
 i. Create a vector containing each `ID` repeated three times, once for each treatment.
 ii. Create a vector containing each `Treatment` repeated for each participant ID.
 
+**Solution**
+
+i.
+
+```{r}
+(ID = rep(x = c(1:10), each = 3))
+```
+
+ii.
+```{r}
+(Treatment = rep(c("Control", "Treatment A", "Treatment B"), times = 10))
+```
+
 ## Part d
 Create a vector containing the `character` "MATH" and the `numeric` 240. What is the resulting class? Explain why in a sentence.
+
+```{r}
+(class = c("MATH", 240))
+class(class)
+```
+
+The class is `character`. This is because the `character` class is "lower" than the `numeric` class, so the vector will resolve all inputs to the `character` class.
